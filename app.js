@@ -19,19 +19,17 @@ res.render('summary', {wishlists});
 app.post('/makeWishlist', (req, res) => {
 
 const{
-
-
-
-
-
+title,
+rating,
+comments
 } = req.body;
 
-if(!blank || type === null || !blank || type === null || !blank || type === null){
+if(!title || title === null || !rating || rating === null || !comments || comments === null){
 
     return res.send("All fields are required!");
 }
 
-wishlists.push({});
+wishlists.push({title, rating, comments});
 res.redirect('/summary');
 
 });

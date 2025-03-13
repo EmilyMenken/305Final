@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wishlist Summary</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
+
+<div id ="summary">
+<h1>All Wishlisted books</h1>
+<ul>
+<% wishlists.forEach(wishlists => { %>
+   <p> <%= wishlists.title %> </p>
+<li>
+Out of 5 stars the rounded rating is: <%= wishlists.rating %>
+</li> 
+<li>
+Comments added: <%= wishlists.comments %>   
+</li>  
+<p></p>
+<% }); %>
+
+
+<a href = '/'><button>Add another book to your wishlist!</button></a>
+
+
+</ul>
+</div>
 
 
 

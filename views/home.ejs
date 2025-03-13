@@ -5,54 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Wishlist</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 </head>
 <body>
 
-
 <div id = "center">
 
 <h1>Create a new Wishlist Item!</h1>
+<form action ="/makeWishlist" method = "POST">
 
-<form action ="/" method = "POST">
-
-<label>
-
-<input placeholder="Book Title"></input>
-
+<label for ="title"> Book Title
+    <input name="title" placeholder="Jurassic Park"></input>
 </label>
 
-<label>
-
-    <textarea placeholder="Comments"></textarea>
-    
+<label for ="rating"> Rating out of 5
+    <input name="rating" type= "number" placeholder="4.8" min="1" max ="5"></input>
 </label>
 
-<label>
-
-    <input placeholder="Rating"></input>
-    
+<label for ="comments"> Comments
+    <textarea name="comments" placeholder="Loved it! Scary!"></textarea>    
 </label>
 
-
-
-
-
-
-
-
-
+<button type = "submit"> Submit new Wishlist book</button>
 </form>
-
-
-
-
+<a href = '/summary'><button>Summary of Wishlists</button></a>
 
 </div>
 
-
-
-    
 </body>
 </html>
